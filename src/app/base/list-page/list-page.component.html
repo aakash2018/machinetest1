@@ -1,0 +1,42 @@
+<div class="header">
+	<h1>TASKS</h1>
+</div>
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-7 mt-5">
+			<h2 style="color:#1abc9c;">Example List</h2>
+		</div>
+		<div class="col-1 mt-5">
+			<span class="material-icons" style="color:#1abc9c;" (click)="addModel()">
+				add_circle
+			</span>
+		</div>
+		<div class="col-8 mt-5">
+			<span *ngFor="let card of model;let i =index">
+				<mat-card  [ngClass]="{
+					'succes-box':card.priority === 'high',
+					'warning-box':card.priority === 'medium',
+					'danger-box':card.priority === 'low'
+				}">
+					<mat-card-header>
+						<mat-card-subtitle>
+								{{card.date | date}}
+						</mat-card-subtitle>
+						<mat-card-title>
+							<h2>
+								{{card.priority}}
+							</h2>
+						</mat-card-title>
+						<div class="icons-view">
+						
+							<span class="material-icons" style="color:#1abc9c;" (click)="deleteTask(i)">
+								delete
+							</span>
+						</div>
+					</mat-card-header>
+				</mat-card>
+				<br>
+			</span>
+		</div>
+	</div>
+</div>

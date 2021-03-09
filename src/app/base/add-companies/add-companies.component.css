@@ -1,0 +1,6 @@
+.close-icon {
+    float: right;
+    margin-right: -25px;
+    margin-top: -25px;
+    z-index: 15px;
+}

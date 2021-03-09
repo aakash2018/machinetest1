@@ -1,0 +1,21 @@
+<span mat-button  mat-dialog-close class="material-icons close-icon" style="color:#1abc9c;">highlight_off</span>
+<h1 mat-dialog-title style="color: lightseagreen; font-weight: 700;">Create Task</h1>
+<form #f="ngForm" >
+	<div class="form-group">
+		<label>Task</label>
+		<input type="input" class="form-control" [(ngModel)]="model.testings" ngModel="testings" #testings  name="testings" placeholder="Testing" > 
+	</div>
+	<div class="form-group">
+		<label>Due Date</label>
+		<input type="date" class="form-control" [(ngModel)]="model.date" ngModel="date" #date name="date" placeholder="date">
+	</div>
+	<div class="form-group">
+		<label>Priority</label>
+		<select class="form-control" [(ngModel)]="model.priority" ngModel="priority" #priority name="priority">
+			<option value="low">Low</option>
+			<option value="medium">Medium</option>
+			<option value="high">High</option>
+		</select>
+	</div>
+	<button mat-button class="btn btn-success" [mat-dialog-close]="model">Add</button>
+</form>

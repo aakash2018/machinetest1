@@ -1,0 +1,43 @@
+/* Header/Logo Title */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    border-radius: 0% 0% 50% 50%;
+    border-bottom: 7px solid darkgrey; 
+    font-size: larger;
+  }
+
+	.material-icons  {
+		cursor: pointer;
+	}
+
+  mat-card {
+    background-color: rgba(252, 255, 229, 0.892);
+    padding: 5px;
+  }
+  
+  .danger-box{
+    border-bottom:5px solid red;
+  }
+
+  .warning-box {
+    border-bottom:5px solid yellow;
+  }
+
+  .succes-box{
+    border-bottom:5px solid lightseagreen;
+  }
+
+	mat-card:hover .icons-view{
+		visibility: visible;
+	}
+
+	.icons-view{
+		float: right;
+		margin-left: 80%;
+		 visibility: hidden; 
+	}
+
+	
